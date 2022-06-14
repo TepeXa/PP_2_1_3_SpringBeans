@@ -10,16 +10,14 @@ public class AnimalsCage {
     @Autowired
     @Qualifier("dog")
     private Animal animal;
-    public long getTimer()
-    {
-    return new Timer().getTime();
-    }
+    @Autowired
+    private Timer time;
+
     public void whatAnimalSay() {
         System.out.println("Say:");
         System.out.println(animal.toString());
         System.out.println("At:");
-        //System.out.println(new Timer().getTime());
-        System.out.println(getTimer());
+        System.out.println(time.getTime());
         System.out.println("________________________");
     }
 }
